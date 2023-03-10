@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Material dialog theme-->
+
+    <style name="AlertDialogTheme" parent="ThemeOverlay.MaterialComponents.Dialog">
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Alert.Button.Positive</item>
+        <item name="buttonBarNeutralButtonStyle">@style/Alert.Button.Neutral</item>
+    </style>
+
+    <style name="Alert.Button.Positive" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="backgroundTint">@color/colorPrimaryDark</item>
+        <item name="rippleColor">@color/colorAccent</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Alert.Button.Neutral" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="rippleColor">@color/colorAccent</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_marginRight">@dimen/margin_v_small</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAppearance">@style/TextInputLayoutAppearance</item>
+    </style>
+
+    <!--  Button Text Style-->
+    <style name="ButtonTextStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">13dp</item>
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:textColor">#ffff</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textAlignment">center</item>
+
+
+    </style>
+
+
+
+    <!--Base Activity Navigation Drawer Header TextVew Style-->
+    <style name="NavigationHeaderTextViewStyle">
+        <item name="android:textSize">15dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!--  Button Text Style-->
+    <style name="ButtonAllCapsTextStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:textColor">#ffff</item>
+        <item name="android:textAlignment">center</item>
+
+    </style>
+
+   <!-- <style name="SwitchCompatStyle" >
+        <item name="thumbTint">@color/switch_color</item>
+        <item name="trackTint">@color/switch_color</item>
+    </style>-->
+
+    <style name="CollapsedAppBar">
+        <item name="android:textSize">@dimen/txt_size_large</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ExpandedAppBar">
+        <item name="android:textSize">@dimen/txt_size_large</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <style name="SwitchCompatStyle" >
+        <item name="thumbTint">@color/utility_switch_color</item>
+        <item name="trackTint">@color/utility_switch_color</item>
+    </style>
+
+
+
+
+
+
+
+    <!--When Use this this transparent theme than use in parent layout android:fitsSystemWindows="true"-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</resources>

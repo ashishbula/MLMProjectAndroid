@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">brandzone.in</domain>
+    </domain-config>
+
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">utilitywebapi.bisplindia.in</domain>
+    </domain-config>
+
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">utilitywebapi.bisplindia.com</domain>
+    </domain-config>
+
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">domainserverdeal.in</domain>
+    </domain-config>
+
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">cpanel.vadicindia.com</domain>
+    </domain-config>
+
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">cpanel.vadicindia.in</domain>
+    </domain-config>
+
+
+
+
+
+
+
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">app.bisplindia.in</domain>
+    </domain-config>
+
+
+
+  <!--  <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">apiserver.in</domain>
+    </domain-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">apiserver.com</domain>
+    </domain-config>-->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">apicodeserver.in</domain>
+    </domain-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">apicodeserver.com</domain>
+    </domain-config>
+
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">utility.discountmania.in</domain>
+    </domain-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">dtil.biztadka.com</domain>
+    </domain-config>
+
+</network-security-config>

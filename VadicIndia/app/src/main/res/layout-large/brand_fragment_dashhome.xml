@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/brand_frag_home_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray5"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/margin_small">
+
+                <!-- Search Section-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:visibility="gone"
+                    android:id="@+id/brand_frag_home_layout_search"
+                    android:background="@drawable/white_bg_box_black_border"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="@dimen/edtxt_height"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:hint="Click here for search product"
+                        android:paddingLeft="@dimen/margin_medium"
+                        android:textSize="@dimen/txt_default"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight=".2"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_search_black"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/LightGray1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:padding="@dimen/margin_small"
+                    android:gravity="left"
+                    android:text="Shop by Category"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_default" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/brand_frag_home_layout_category"
+                    android:orientation="vertical">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/brand_frag_home_categoryList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--********SLIDER**********-->
+
+
+            <!--Slider 1-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/brand_frag_home_layout_slider1"
+                android:background="@color/gray4"
+                android:padding="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_small"
+                android:orientation="vertical">
+                <com.daimajia.slider.library.SliderLayout
+                    android:id="@+id/brand_frag_home_slider1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    />
+            </LinearLayout>
+
+
+            <!--Layout for offer and Best deail-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@color/gray4"
+                android:id="@+id/brand_frag_home_layout_offer"
+                android:layout_marginTop="@dimen/margin_small"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:gravity="left"
+                   android:padding="@dimen/margin_small"
+                    android:text="Best Deal"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/txt_default" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/LightGray1" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:id="@+id/brand_frag_home_recycler_bestdeal">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+            <!--** Front Category wise Product display-->
+
+            <!-- Layout for Front Category MEN Product-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@color/white"
+                android:id="@+id/brand_frag_home_layout_fcate_men"
+                android:layout_marginTop="@dimen/margin_small"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_small"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:gravity="left"
+                        android:id="@+id/brand_frag_home_txt_fcate_men"
+                        android:text="Men"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/txt_default" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center|right"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:gravity="right"
+                        android:id="@+id/brand_frag_home_txt_fcate_men_viewall"
+                        android:text="View all"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/txt_default" />
+                </LinearLayout>
+
+                <!--Men Category Slider-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/brand_frag_home_layout_slider_men"
+                    android:background="@color/gray4"
+                    android:padding="0dp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:orientation="vertical">
+                    <com.daimajia.slider.library.SliderLayout
+                        android:id="@+id/brand_frag_home_slider_men"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        />
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/LightGray1" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:id="@+id/brand_frag_home_recycler_fcate_men">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+            <!-- Layout for Front Category Sport Club Product-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@color/gray4"
+                android:id="@+id/brand_frag_home_layout_fcate_sports"
+                android:layout_marginTop="@dimen/margin_small"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_small"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:gravity="left"
+                        android:id="@+id/brand_frag_home_txt_fcate_sports"
+                        android:text="Sports "
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/txt_default" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:gravity="right"
+                        android:id="@+id/brand_frag_home_txt_fcate_sports_viewall"
+                        android:text="View all "
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/txt_default" />
+                </LinearLayout>
+
+                <!--Sports  Category Slider-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/brand_frag_home_layout_slider_sport"
+                    android:background="@color/gray4"
+                    android:padding="0dp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:orientation="vertical">
+                    <com.daimajia.slider.library.SliderLayout
+                        android:id="@+id/brand_frag_home_slider_sport"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        />
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/LightGray1" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:id="@+id/brand_frag_home_recycler_fcate_sports">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+            <!-- Layout for Front Category Backpack & Travel Bag Product-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@color/white"
+                android:id="@+id/brand_frag_home_layout_fcate_bag"
+                android:layout_marginTop="@dimen/margin_small"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_small"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:gravity="left"
+                        android:id="@+id/brand_frag_home_txt_fcate_bag"
+                        android:text="Backpack &amp; Travel Bag"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/txt_default" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:gravity="right"
+                        android:id="@+id/brand_frag_home_txt_fcate_bag_viewall"
+                        android:text="View all"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/txt_default" />
+                </LinearLayout>
+
+                <!--Backpack & Travel Bag Category Slider-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/brand_frag_home_layout_slider_beg"
+                    android:background="@color/gray4"
+                    android:padding="0dp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:orientation="vertical">
+                    <com.daimajia.slider.library.SliderLayout
+                        android:id="@+id/brand_frag_home_slider_beg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        />
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/LightGray1" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:id="@+id/brand_frag_home_recycler_fcate_bag">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+            <!-- Layout for Front Category Kids Product-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@color/gray4"
+                android:id="@+id/brand_frag_home_layout_fcate_kids"
+                android:layout_marginTop="@dimen/margin_small"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_small"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:gravity="left"
+                        android:id="@+id/brand_frag_home_txt_fcate_kids"
+                        android:text="Kid's"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/txt_default" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:gravity="right"
+                        android:id="@+id/brand_frag_home_txt_fcate_kids_viewall"
+                        android:text="View all"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/txt_default" />
+                </LinearLayout>
+
+                <!-- Kids Category Slider-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/brand_frag_home_layout_slider_kids"
+                    android:background="@color/gray4"
+                    android:padding="0dp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:orientation="vertical">
+                    <com.daimajia.slider.library.SliderLayout
+                        android:id="@+id/brand_frag_home_slider_kids"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        />
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/LightGray1" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:id="@+id/brand_frag_home_recycler_fcate_kids">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+            <!-- Layout for Front Category Women Product-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@color/white"
+                android:id="@+id/brand_frag_home_layout_fcate_women"
+                android:layout_marginTop="@dimen/margin_small"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_small"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:gravity="left"
+                        android:id="@+id/brand_frag_home_txt_fcate_women"
+                        android:text="Kid's"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/txt_default" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:gravity="right"
+                        android:id="@+id/brand_frag_home_txt_fcate_women_viewall"
+                        android:text="View all"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/txt_default" />
+                </LinearLayout>
+
+                <!--Women Category Slider-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/brand_frag_home_layout_slider_women"
+                    android:background="@color/gray4"
+                    android:padding="0dp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:orientation="vertical">
+                    <com.daimajia.slider.library.SliderLayout
+                        android:id="@+id/brand_frag_home_slider_women"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/LightGray1" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:id="@+id/brand_frag_home_recycler_fcate_women">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+            <!-- Layout for Front Category Electronics & Home Product-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@color/gray4"
+                android:id="@+id/brand_frag_home_layout_fcate_electric"
+                android:layout_marginTop="@dimen/margin_small"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_small"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:gravity="left"
+                        android:id="@+id/brand_frag_home_txt_fcate_electric"
+                        android:text="Electronics &amp; Home"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/txt_default" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:gravity="right"
+                        android:id="@+id/brand_frag_home_txt_fcate_electric_viewall"
+                        android:text="View all"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/txt_default" />
+                </LinearLayout>
+
+                <!--Electronics & Home Category Slider-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/brand_frag_home_layout_slider_electric"
+                    android:background="@color/gray4"
+                    android:padding="0dp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:orientation="vertical">
+                    <com.daimajia.slider.library.SliderLayout
+                        android:id="@+id/brand_frag_home_slider_electric"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/LightGray1" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:id="@+id/brand_frag_home_recycler_fcate_electric">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
